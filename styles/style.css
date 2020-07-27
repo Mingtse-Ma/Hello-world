@@ -4,7 +4,7 @@ html{
     /*Google font 输出的CSS*/
     font-family:'Lacquer',sans-serif;
     font-family:'Zhi Mang Xing',sans-serif;
-    background-color: #031314;
+    background-color: #3cf0fd;
 
 }
 h1{
@@ -12,7 +12,7 @@ h1{
     text-align: center;
     margin:0;/*外边距全设为0，覆盖掉默认样式*/
     padding: 20px 0;/*内边距上下设置为20px*/
-    color: #3c80fd;/*将标题文本与HTML的背景颜色设为一致*/
+    color: #3c69fd;/*将标题文本与HTML的背景颜色设为一致*/
     text-shadow: 3px 3px 1px black;
 }
 h2{
@@ -30,7 +30,7 @@ p,li{
 body{
     width:1000px;
     margin: 0 auto;
-    background-color: #f0f1e8;
+    background-color: #daff06;
     padding: 0 20px 20px 20px;
     border: 5px solid black;
 }
