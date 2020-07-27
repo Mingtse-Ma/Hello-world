@@ -1,0 +1,39 @@
+html{
+    /*px表示“像素（pixels）”：基础字号为10像素*/
+    font-size: 20px;
+    /*Google font 输出的CSS*/
+    font-family:'Lacquer',sans-serif;
+    font-family:'Zhi Mang Xing',sans-serif;
+    background-color: #3cf0fd;
+
+}
+h1{
+    font-size: 60px;
+    text-align: center;
+    margin:0;/*外边距全设为0，覆盖掉默认样式*/
+    padding: 20px 0;/*内边距上下设置为20px*/
+    color: #3cf0fd;/*将标题文本与HTML的背景颜色设为一致*/
+    text-shadow: 3px 3px 1px black;
+}
+h2{
+    text-align: center;
+}
+p,li{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+body{
+    width:1000px;
+    margin: 0 auto;
+    background-color: #daff06;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
+
+img{
+    display:block;
+    margin: 0 auto;
+    width: 400px;
+}
