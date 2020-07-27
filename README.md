@@ -1,4 +1,2 @@
-# Hello-world
-new man is on the way
-
-Hello, I'm here, the world is big, waiting for us to explore.
+# Long-Sentence-Share
+欢迎！为方便和朋友们分享交流长难句建立；按节奏更新~
