@@ -12,7 +12,7 @@ h1{
     text-align: center;
     margin:0;/*外边距全设为0，覆盖掉默认样式*/
     padding: 20px 0;/*内边距上下设置为20px*/
-    color: #3c80fd;/*将标题文本与HTML的背景颜色设为一致*/
+    color: #e1cee7;/*将标题文本与HTML的背景颜色设为一致*/
     text-shadow: 3px 3px 1px black;
 }
 h2{
@@ -21,17 +21,23 @@ h2{
 h5{
     text-align: center;
 }
-p,li{
+p{
     font-size: 16px;
     line-height: 2;
     letter-spacing: 1px;
 }
 
+li{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    float: left;
+}
 body{
     width:1000px;
     margin: 0 auto;
     background-color: #f0f1e8;
-    padding: 0 20px 20px 20px;
+    padding: 0 0 0 0;
     border: 5px solid black;
 }
 
@@ -39,4 +45,67 @@ img{
     display:block;
     margin: 0 auto;
     width: 400px;
+}
+/*下方是关于横向导航栏的css*/
+ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow: hidden;
+}
+a:link,a:visited
+{
+display:block;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#201e1e;
+widows: 60px;
+text-align:center;
+padding:4px;
+text-decoration:none;
+text-transform:uppercase;
+}
+a:hover,a:active
+{
+background-color:#008bcc;
+}
+/*下方是页眉、页脚、左侧目录和主体内容的框*/
+div.container
+{
+width:100%;
+margin:0px;
+border:1px solid black;
+line-height:250%;
+}
+div.header
+{
+    padding:0.5em;
+    background-color:rgb(185, 64, 185);
+    clear:left;
+}
+div.footer
+{
+padding:0.5em;
+color:rgb(224, 220, 220);
+background-color:rgb(14, 20, 20);
+clear:left;
+}
+h1.header,h5.header
+{
+padding:0;
+margin:0;
+}
+div.left
+{
+float:left;
+width:160px;
+margin:0;
+padding:1em;
+}
+div.content
+{
+margin-left:190px;
+border-left:1px solid black;
+padding:1em;
 }
