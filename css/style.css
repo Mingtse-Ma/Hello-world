@@ -7,129 +7,18 @@ html{
     background-color: #031314;
 
 }
-/*文字设定区*/
-h1{
-    font-size: 60px;
-    text-align: center;
-    margin:0;/*外边距全设为0，覆盖掉默认样式*/
-    padding: 20px 0;/*内边距上下设置为20px*/
-    color: #e1cee7;/*将标题文本与HTML的背景颜色设为一致*/
-    text-shadow: 3px 3px 1px black;
-}
-h2{
-    text-align: center;
-}
-.footer h5{
-    text-align: center;
-}
-p{
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-}
-
-.tagtwo li{
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-    float: left;
-}
-.tag li{
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-}
-body{
-    width:1000px;
-    margin: 0 auto;
-    background-color: #f0f1e8;
-    padding: 0 0 0 0;
-    border: 5px solid black;
-}
-
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 50px;
+    background-color: #f5f5f5;
+  }
 img{
     display:block;
     margin: 0 auto;
     width: 400px;
-}
-/*下方是关于横向导航栏的css*/
-ul
-{
-list-style-type:none;
-margin:0;
-padding:0;
-overflow: hidden;
-padding-top:6px;
-padding-bottom:6px;
-}
-.tag ul{
-list-style-type:none;
-margin:0;
-padding:0;
-overflow: hidden;
-padding-top:6px;
-padding-bottom:6px;
-}
-a:link,a:visited
-{
-display:block;/*将行内元素a转化为块级元素*/
-font-weight:bold;
-color:#FFFFFF;
-background-color:#201e1e;
-widows: 60px;
-text-align:center;
-padding:4px;
-text-decoration:none;
-text-transform:uppercase;/*字母大写*/
-top:5px;
-}
-a:hover,a:active/*a：hover属性*/
-{
-background-color:#008bcc;
-}
-/*下方是页眉、页脚、左侧目录和主体内容的框*/
-div.container
-{
-width:100%;
-margin:0px;
-border:1px solid black;
-line-height:250%;
-}
-div.header
-{
-    padding:0.5em;
-    background-color:rgb(185, 64, 185);
-    clear:both;
-}
-div.footer
-{
-padding:0.5em;
-color:rgb(224, 220, 220);
-background-color:rgb(14, 20, 20);
-clear:left;
-}
-h1.header,h5.header
-{
-padding:0;
-margin:0;
-}
-div.left
-{
-width:160px;
-margin:0;
-padding:1em;
-float:left;
-}
-div.content
-{
-margin-left:190px;
-border-left:1px solid black;
-padding:1em;
-}
-div.tag{
-    position:fixed;
-    top:0;
-    left:0;
-    margin:0;
-    border:1px solid black;
+    max-width: 100%;
+    height: auto;
 }
