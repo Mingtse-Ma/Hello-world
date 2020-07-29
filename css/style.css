@@ -27,11 +27,16 @@ p{
     letter-spacing: 1px;
 }
 
-li{
+.tagtwo li{
     font-size: 16px;
     line-height: 2;
     letter-spacing: 1px;
     float: left;
+}
+.tag li{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
 }
 body{
     width:1000px;
@@ -53,10 +58,20 @@ list-style-type:none;
 margin:0;
 padding:0;
 overflow: hidden;
+padding-top:6px;
+padding-bottom:6px;
+}
+.tag ul{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow: hidden;
+padding-top:6px;
+padding-bottom:6px;
 }
 a:link,a:visited
 {
-display:block;
+display:block;/*将行内元素a转化为块级元素*/
 font-weight:bold;
 color:#FFFFFF;
 background-color:#201e1e;
@@ -64,9 +79,10 @@ widows: 60px;
 text-align:center;
 padding:4px;
 text-decoration:none;
-text-transform:uppercase;
+text-transform:uppercase;/*字母大写*/
+top:5px;
 }
-a:hover,a:active
+a:hover,a:active/*a：hover属性*/
 {
 background-color:#008bcc;
 }
@@ -108,4 +124,11 @@ div.content
 margin-left:190px;
 border-left:1px solid black;
 padding:1em;
+}
+div.tag{
+    position:fixed;
+    top:0;
+    left:0;
+    margin:0;
+    border:1px solid black;
 }
