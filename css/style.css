@@ -6,6 +6,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+
 #record {
     margin: 0 auto;
 }
@@ -23,4 +25,17 @@ p{
 }
 h2{
     text-align: center;
+}
+
+div.headpic{
+    display:flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    overflow: hidden;
+    widows: 100%;
+}
+
+div.heads{
+    width:10%;/*相对页面的宽度，图片等比例缩放*/
 }
