@@ -2,6 +2,8 @@
 <html lang="zh">
     <head>
         <meta charset="utf-8">
+        <!--计数js-->
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         <!-- 引入 Bootstrap 并进行自适应配置-->
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
@@ -30,25 +32,40 @@
             })
         </script>
         <script>
-            function clickCounter()
-            {
-                if(typeof(Storage)!=="undefined")
-                {
-                    if (localStorage.clickcount)
-                    {
-                        localStorage.clickcount=Number(localStorage.clickcount)+1;
-                    }
-                    else
-                    {
-                        localStorage.clickcount=1;
-                    }
-                    document.getElementById("result").innerHTML=" 你已经点击了按钮 " + localStorage.clickcount + " 次 ";
-                }
-                else
-                {
-                    document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
-                }
+            // 载入所有存储在localStorage的数据
+            loadAll(); 	
+                
+            //保存数据  
+            function save(){  
+                var siteurl = document.getElementById("siteurl").value;  
+                var sitename = document.getElementById("sitename").value;  
+                localStorage.setItem(sitename, siteurl);
+                alert("添加成功");
             }
+            //查找数据  
+            function find(){  
+                var search_site = document.getElementById("search_site").value;  
+                var siteurl = localStorage.getItem(search_site);  
+                var find_result = document.getElementById("find_result");  
+                find_result.innerHTML = search_site + "句子里你的问题是：" + siteurl;  
+            }
+            //将所有存储在localStorage中的对象提取出来，并展现到界面上
+            function loadAll(){  
+                var list = document.getElementById("list");  
+                if(localStorage.length>0){  
+                    var result = "<table border='1'>";  
+                    result += "<tr><td>key</td><td>value</td></tr>";  
+                    for(var i=0;i<localStorage.length;i++){  
+                        var sitename = localStorage.key(i);  
+                        var siteurl = localStorage.getItem(sitename);  
+                        result += "<tr><td>"+sitename+"</td><td>"+siteurl+"</td></tr>";  
+                    }  
+                    result += "</table>";  
+                    list.innerHTML = result;  
+                }else{  
+                    list.innerHTML = "数据为空……";  
+                }  
+            }      
             </script>
     </head>
 <body>
@@ -121,10 +138,25 @@
                     <br>网站由心灵抽空制作、还很粗糙有待慢慢提升
                     <br>电脑端按<kbd>Crtl</kbd>+<kbd>F</kbd>可以搜索、手机端可用浏览器自带的页面查找。
                 </h5>
-                <p><button onclick="clickCounter()" type="button">点我！</button></p>
-                <div id="result"></div>
-                <p>点击该按钮查看计数器的增加。</p>
-                <p>关闭浏览器选项卡(或窗口),重新打开此页面,计数器将继续计数(不是重置)。</p>
+                <div style="border: 2px dashed #ccc;width:320px;text-align:center;">     
+                    <p>可以用这里帮你记录问题</p>
+                    <label for="sitename">问题句分享人姓名：</label>  
+                    <input type="text" id="sitename" name="sitename" class="text"/>  
+                    <br/>  
+                    <label for="siteurl">我的问题：</label>  
+                    <input type="text" id="siteurl" name="siteurl"/>  
+                    <br/>  
+                    <input type="button" onclick="save()" value="新增记录"/>
+                    <p>同一分享者，新纪录会覆盖旧的</p>  
+                    <hr/>  
+                    <label for="search_phone">输入问题句分享人姓名：</label>  
+                    <input type="text" id="search_site" name="search_site"/>  
+                    <input type="button" onclick="find()" value="查找"/>  
+                    <p id="find_result"><br/></p>  
+                </div>  
+                <br/>  
+                <div id="list">  
+                </div>              
             </div>
             <!--7.28日-->
             <div class="tab-pane fade" id="Julytwei">
@@ -413,6 +445,10 @@
 
 <footer class="footer">
         <div class="container">
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+            <br><span id="busuanzi_container_site_uv">
+                本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              </span>
             <p class="text-center"><small><strong>CopyRight 2020 by 心灵</strong></small></p>
         </div>
 </footer>
