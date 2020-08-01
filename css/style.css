@@ -6,3 +6,15 @@ img {
     max-width: 100%;
     height: auto;
 }
+#record {
+    margin: 0 auto;
+}
+
+hr.footerborder{
+    height:wpx;border:none;border-top:1px solid black;
+}
+
+div.page-header{
+    text-align: center;
+}
+
