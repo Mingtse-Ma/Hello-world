@@ -29,6 +29,27 @@
               });
             })
         </script>
+        <script>
+            function clickCounter()
+            {
+                if(typeof(Storage)!=="undefined")
+                {
+                    if (localStorage.clickcount)
+                    {
+                        localStorage.clickcount=Number(localStorage.clickcount)+1;
+                    }
+                    else
+                    {
+                        localStorage.clickcount=1;
+                    }
+                    document.getElementById("result").innerHTML=" 你已经点击了按钮 " + localStorage.clickcount + " 次 ";
+                }
+                else
+                {
+                    document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
+                }
+            }
+            </script>
     </head>
 <body>
     <div class="jumbotron text-center" style="margin-bottom: 0">
@@ -100,6 +121,10 @@
                     <br>网站由心灵抽空制作、还很粗糙有待慢慢提升
                     <br>电脑端按<kbd>Crtl</kbd>+<kbd>F</kbd>可以搜索、手机端可用浏览器自带的页面查找。
                 </h5>
+                <p><button onclick="clickCounter()" type="button">点我！</button></p>
+                <div id="result"></div>
+                <p>点击该按钮查看计数器的增加。</p>
+                <p>关闭浏览器选项卡(或窗口),重新打开此页面,计数器将继续计数(不是重置)。</p>
             </div>
             <!--7.28日-->
             <div class="tab-pane fade" id="Julytwei">
