@@ -30,7 +30,7 @@ h2{
 div.headpic{
     display:flex;
     flex-direction: row-reverse;
-    flex-wrap: nowrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-around;
     overflow: hidden;
     widows: 100%;
